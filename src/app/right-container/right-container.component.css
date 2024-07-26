@@ -1,1 +1,392 @@
-.celsius,.fahrenheit{border-radius:500px;padding:5px 7px;font-size:small}.card-temp-img img,.profile-image img{width:40px;height:40px}.right-container{width:100%;height:100%;display:flex;flex-direction:column}.right-container-navbar{flex:2;display:flex;flex-direction:row;justify-content:space-between;align-items:center;font-size:small;font-weight:700}.navbar-tabs{display:flex;flex-direction:row;margin-left:30px;margin-top:10px}.today{margin-right:15px;color:#c5c5c5}.today:hover,.week:hover{color:#1a1a1a;cursor:pointer}.today-active,.week-active{color:#1a1a1a}.week{color:#c5c5c5}.underline{width:50px;height:1.5px;margin-top:2.4rem;background-color:#1a1a1a}.underline-today{transform:translate3d(-210% ,0 ,0);transition:.1s}.underline-week{transform:translate3d(-90% ,0 ,0);transition:.1s}.navbar-metric{display:flex;flex-direction:row;margin-right:30px;justify-content:center;align-items:center}.fahrenheit,.profile-image img{margin-left:10px;margin-right:10px}.celsius{color:#1a1a1a;background-color:#fff}.celsius-active,.celsius:hover,.fahrenheit-active,.fahrenheit:hover{background-color:#1a1a1a;color:#fff}.celsius:hover,.fahrenheit:hover{cursor:pointer}.fahrenheit{color:#1a1a1a;background-color:#fff}.card,.right-container-todays-highlight-card{background-color:#fff;border-radius:10px;text-align:center}.profile-image img{border-radius:5px}.right-continer-data-box{flex:12;display:flex;flex-direction:column;margin:10px 30px 30px}.right-container-today-cards,.right-container-week-cards{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:center}.card{width:80px;height:95px;margin-left:5px;justify-content:center;align-items:center;font-size:x-small;font-weight:500}.card-day{margin:7px 5px 5px}.sunrise-img img,.sunset-img img,.wind-status-logo img{width:30px;height:30px}.card-temp-value{margin:5px}.right-container-todays-highlight,.sunrise-sunset-value{flex:3;display:flex;flex-direction:column}.right-container-todays-highlight-title{margin-top:30px;flex:2;font-size:small;font-weight:700}.right-container-todays-highlight-cards{flex:8;display:flex;flex-direction:row;justify-content:center;align-items:center}.right-container-todays-highlight-card{display:flex;flex-direction:column;width:180px;height:130px;align-items:center;margin-left:10px}.right-container-todays-highlight-card-title{flex:1;color:#c9c9c9;font-size:12px;font-weight:700;margin:10px 10px 10px 15px;align-self:self-start}.gauge{flex:2;width:70%;max-width:180px;font-size:32px;color:#004033;font-weight:500;margin-bottom:-20px;margin-top:-20px}.gauge__body{width:100%;height:0;padding-bottom:50%;background:#f3f3f4;position:relative;border-top-left-radius:100% 200%;border-top-right-radius:100% 200%;overflow:hidden;margin-top:1rem}.gauge__fill{position:absolute;top:100%;left:0;width:inherit;height:100%;background:#ffbf5e;transform-origin:center top;transform:rotate(.25turn);transition:transform .2s ease-out}.gauge__cover{width:75%;height:150%;background-color:#fff;border-radius:50%;position:absolute;top:25%;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;padding-bottom:25%;box-sizing:border-box;color:#fff}.right-container-todays-highlight-value{flex:1;font-size:xx-large;font-weight:500;margin-bottom:30px;z-index:1}.wind-status-value{flex:2;font-size:40px;font-weight:500;text-align:center;margin-top:-20px}.unit{font-size:14px}.wind-status-logo{flex:1;align-self:self-start;margin-left:30px}.sunrise,.sunset{flex:1;display:flex;flex-direction:row}.sunrise-img,.sunset-img{flex:1;margin-right:10px;margin-bottom:10px}.sunrise-time,.sunset-time{flex:4;font-weight:700;font-size:16px}.sunrise-time span,.sunset-time span{font-weight:300}.sunset-img img{margin-top:-5px}.humidity-summary{font-size:small;font-weight:700;margin-bottom:20px}
+.right-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-navbar {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+.navbar-tabs {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.today {
+    margin-right: 15px;
+    color: #c5c5c5;
+}
+
+.today:hover {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.today-active {
+    color: #1a1a1a;
+}
+
+.week {
+    color: #c5c5c5;
+}
+
+.week:hover {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.week-active {
+    color: #1a1a1a;
+}
+
+.underline {
+    width: 50px;
+    height: 1.5px;
+    margin-top: 2.4rem;
+    background-color: #1a1a1a;
+
+}
+
+
+.underline-today {
+    transform: translate3d(-210%, 0, 0);
+    transition: 100ms;
+}
+
+.underline-week {
+    transform: translate3d(-90%, 0, 0);
+    transition: 100ms;
+}
+
+.navbar-metric {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.celsius {
+    border-radius: 500px;
+    padding: 5px 7px 5px 7px;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+}
+
+.celsius:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.celsius-active {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.fahrenheit {
+    border-radius: 500px;
+    padding: 5px 7px 5px 7px;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fahrenheit:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fahrenheit-active {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Navbar designing ends */
+
+
+/* Data box designing starts */
+
+.right-continer-data-box {
+    flex: 12;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 10px;
+}
+
+.right-container-week-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-container-today-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 80px;
+    height: 95px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+}
+
+.card-day {
+    margin: 5px;
+    margin-top: 7px;
+}
+
+.card-temp-img img {
+    width: 40px;
+    height: 40px;
+}
+
+.card-temp-value {
+    margin: 5px;
+}
+
+/* ------------------------------------------------------ */
+/* Title styling */
+.right-container-todays-highlight {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-todays-highlight-title {
+    margin-top: 30px;
+
+    flex: 2;
+    font-size: small;
+    font-weight: bold;
+}
+
+.right-container-todays-highlight-cards {
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.right-container-todays-highlight-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 180px;
+    height: 130px;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.right-container-todays-highlight-card-title {
+    flex: 1;
+    color: #c9c9c9;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px;
+    align-self: self-start;
+    margin-left: 15px;
+}
+
+/* Gauge styling  */
+.gauge {
+
+    flex: 2;
+    width: 70%;
+    max-width: 180px;
+    font-size: 32px;
+    color: #004033;
+    font-weight: 500;
+    margin-bottom: -20px;
+    margin-top: -20px;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #f3f3f4;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #ffbf5e;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+/* bottom value styling */
+.right-container-todays-highlight-value {
+    flex: 1;
+    font-size: xx-large;
+    font-weight: 500;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.wind-status-value {
+    flex: 2;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.unit {
+    font-size: 14px;
+
+}
+
+.wind-status-logo {
+    flex: 1;
+    align-self: self-start;
+    margin-left: 30px;
+
+}
+
+.wind-status-logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.sunrise-sunset-value {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sunrise {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.sunrise-img {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.sunrise-img img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.sunrise-time {
+    flex: 4;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sunrise-time span {
+    font-weight: 300;
+}
+
+.sunset {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.sunset-img {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.sunset-img img {
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+}
+
+.sunset-time {
+    flex: 4;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sunset-time span {
+    font-weight: 300;
+}
+
+.humidity-summary {
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Data box designing ends */
